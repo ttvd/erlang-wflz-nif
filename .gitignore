@@ -1,0 +1,17 @@
+# OS X related.
+.DS_Store
+
+# Erlang related.
+ebin
+priv
+*.beam
+*.dump
+log
+
+# C/C++ products.
+*.o
+*.lo
+*.la
+*.so
+*.dylib
+*.dll
