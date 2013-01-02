@@ -1,0 +1,14 @@
+{application, wflz,
+    [
+        {description, "An Erlang NIF wrapper for wfLZ fast compression / decompression library."},
+        {vsn, "1.0.0"},
+        {registered, []},
+        {applications, 
+            [
+                kernel,
+                stdlib
+            ]},
+        {env, []},
+        {modules, [wflz]}
+    ]
+}.
