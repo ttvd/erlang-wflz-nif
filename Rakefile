@@ -1,8 +1,31 @@
 
-# Include directory for Erlang headers, usually something like /usr/lib/erlang/erts-5.8.1/include
-DIR_ERLANG_INCLUDE = "/sdk/lib/erlang/usr/include"
+# Helper function used to figure out location of erlang headers.
+def erlang_headers
+
+    loc = %x{which erl}
+    
+    if loc.empty?
+
+        puts "Error locating erlang erl binary, make sure it's in the path."
+        exit
+    end
+
+    idx = loc.index('/bin')
+
+    if not idx
+
+        puts "Invalid erlang path, make sure installation is correct."
+        exit
+    end
+
+    "#{loc[0, idx]}/lib/erlang/usr/include"
+end
+
+
 
 task :default => [:help]
+
+
 
 # List help.
 desc "Help"
@@ -44,7 +67,7 @@ task :darwin32 do
         sh 'mkdir priv'
     end
 
-    sh "gcc -undefined dynamic_lookup -dynamiclib -o priv/wflz.so src.c/wlfz_nif.c deps/wflz/wfLZ.c -I#{DIR_ERLANG_INCLUDE} -m32"
+    sh "gcc -undefined dynamic_lookup -dynamiclib -o priv/wflz.so src.c/wlfz_nif.c deps/wflz/wfLZ.c -I#{erlang_headers} -m32"
 end
 
 
@@ -56,5 +79,5 @@ task :darwin64 do
         sh 'mkdir priv'
     end
 
-    sh "gcc -undefined dynamic_lookup -dynamiclib -o priv/wflz.so src.c/wlfz_nif.c deps/wflz/wfLZ.c -I#{DIR_ERLANG_INCLUDE} -m64"
+    sh "gcc -undefined dynamic_lookup -dynamiclib -o priv/wflz.so src.c/wlfz_nif.c deps/wflz/wfLZ.c -I#{erlang_headers} -m64"
 end
