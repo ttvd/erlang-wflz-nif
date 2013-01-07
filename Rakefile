@@ -95,7 +95,7 @@ end
 
 
 # This will compile the OS X 64 bit project.
-desc "Compile OS X Darwin 32 bit"
+desc "Compile OS X Darwin 64 bit"
 task :darwin64 do
 
     if not Dir.exists? "priv"
