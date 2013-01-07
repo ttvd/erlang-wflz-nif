@@ -3,7 +3,12 @@ wflz-erlang-nif
 
 An Erlang NIF wrapper for wfLZ fast compression / decompression library, distributed under WTFPL license, please see http://code.google.com/p/wflz for further information.
 
-# Building
+# License.
+
+1. wfLZ code is distributed under the WTFPL "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE".
+2. Rest of the code, including Erlang code and nif bindings are distributed under BSD license.
+
+# Building.
 
 1. rake deps -- pull the wflz dependency from google code.
 2. rake platform32|platform64 -- where platform is your platform (see platforms through rake -- tasks) to compile the wflz dynamic library NIF.
