@@ -58,6 +58,29 @@ task :compile do
     sh 'rebar compile'
 end
 
+# This will compile the linux 32 bit project.
+desc "Compile Linux 32 bit"
+task :linux32 do
+
+    if not Dir.exists? "priv"
+        sh 'mkdir priv'
+    end
+
+    sh "gcc -o priv/wflz.so -fpic -shared src.c/wlfz_nif.c deps/wflz/wfLZ.c -I#{erlang_headers} -m32"
+end
+
+
+# This will compile the linux 32 bit project.
+desc "Compile Linux 64 bit"
+task :linux64 do
+
+    if not Dir.exists? "priv"
+        sh 'mkdir priv'
+    end
+
+    sh "gcc -o priv/wflz.so -fpic -shared src.c/wlfz_nif.c deps/wflz/wfLZ.c -I#{erlang_headers} -m64"
+end
+
 
 # This will compile the OS X 32 bit project.
 desc "Compile OS X Darwin 32 bit"
