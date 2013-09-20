@@ -1,12 +1,12 @@
 wflz-erlang-nif
 ===============
 
-An Erlang NIF wrapper for wfLZ fast compression / decompression library, distributed under WTFPL license, please see http://code.google.com/p/wflz for further information.
+An Erlang NIF wrapper for wfLZ fast compression / decompression library.
 
 # License.
 
-1. wfLZ code is distributed under the WTFPL "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE". Please see http://sam.zoy.org/wtfpl/ .
-2. Rest of the code, including Erlang code and nif bindings are distributed under BSD license.
+1. wfLZ code is distributed under WTFPL license, please see http://code.google.com/p/wflz for further information.
+2. Rest of the code, including Erlang code and nif bindings is distributed under BSD license.
 
 # Building.
 
