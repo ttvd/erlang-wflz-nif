@@ -5,7 +5,7 @@ An Erlang NIF wrapper for wfLZ fast compression / decompression library, distrib
 
 # License.
 
-1. wfLZ code is distributed under the WTFPL "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE".
+1. wfLZ code is distributed under the WTFPL "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE". Please see http://sam.zoy.org/wtfpl/ .
 2. Rest of the code, including Erlang code and nif bindings are distributed under BSD license.
 
 # Building.
