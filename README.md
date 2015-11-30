@@ -1,4 +1,4 @@
-wflz-erlang-nif
+erlang-wflz-nif
 ===============
 
 An Erlang NIF wrapper for wfLZ fast compression / decompression library.
